@@ -1,0 +1,61 @@
+* {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #003f5c, #ff6361);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-information {
+    margin-top: -40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#form-information h1 {
+    color: white;
+}
+
+#form-information #checkboxes {
+    display: flex;
+    flex-direction: row;
+}
+#form-information #radios {
+    display: flex;
+    flex-direction: row;
+}
+
+#form-information article {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+#form-information label {
+    color: white;
+    user-select: none;
+}
+
+p {
+    color: white;
+}
+
+#form-information #text-about {
+    width: 350px;
+    height: 165px;
+}
+
+#form-information section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 20px 0;
+}

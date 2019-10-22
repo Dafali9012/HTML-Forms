@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Forms Uppgift</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="jquery.js"></script>
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <form id="form-information" onsubmit="return onSubmit()">
+        <h1><strong>Information Form</strong></h1>
+
+        <section id="dropdown">
+            <p><strong>Favorite Weekday</strong></p>
+            <select id="favorite-weekday">
+                <option value="mon">Monday</option>
+                <option value="tue">Tuesday</option>
+                <option value="wed">Wednesday</option>
+                <option value="thu">Thurday</option>
+                <option value="fri">Friday</option>
+                <option value="sat">Saturday</option>
+                <option value="sun">Sunday</option>
+            </select>
+        </section>
+
+        <section id="numberInput">
+            <p><strong>Birth Year</strong></p>
+            <input type="number" id="birth-year" min="1900" max="2020" placeholder="Ex: 1980" required>
+        </section>
+
+        <section id="about">
+            <p><strong>About</strong></p>
+            <textarea id="text-about" placeholder="Write a short presentation of yourself" maxlength="280" required></textarea>
+        </section>
+
+        <section id=checkboxes-group>
+            <p><strong>Favorite Animals</strong></p>
+            <section id="checkboxes">
+                <article><label for="rabbit">Rabbit</label><input type="checkbox" id="rabbit"></article>
+                <article><label for="snake">Snake</label><input type="checkbox" id="snake"></article>
+                <article><label for="spider">Spider</label><input type="checkbox" id="spider"></article>
+                <article><label for="dog">Dog</label><input type="checkbox" id="dog"></article>
+            </section>
+        </section>
+
+        <section id="radios-group">
+            <p><strong>Favorite Color</strong></p>
+            <section id="radios">
+                <article><label for="red">Red</label><input type="radio" id="red" name="color-choice" required></article>
+                <article><label for="green">Green</label><input type="radio" id="green" name="color-choice"></article>
+                <article><label for="blue">Blue</label><input type="radio" id="blue" name="color-choice"></article>
+            </section>
+        </section>
+
+        <button id="send-button">Show summary</button>
+    </form>
+
+</body>
+
+</html>
