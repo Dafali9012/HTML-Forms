@@ -1,4 +1,3 @@
-let presentation = ""
 let presentations = new Array()
 let user = 000
 
@@ -6,15 +5,7 @@ $("#presentations").hide()
 
 $("#form-information").on("submit", function(e){
     if($("input[type=checkbox]:checked").length == 0) {
-        $("input[type=checkbox]").css({
-            "box-shadow":"0px 0px 1px 1px red",
-            "background-color": "green"
-        })
         return false
-    } else {
-        $("input[type=checkbox]").css({
-            "box-shadow":"0px 0px 0px 0px red"
-        })
     }
 
     e.preventDefault()
@@ -42,19 +33,40 @@ $("#form-information").on("submit", function(e){
     "and your favorite color is "+$("input[name=color-choice]:checked").attr("id")+"."
     )
     
-
     presentations.push(presentationTemp)
     
-
-    presentation = ""
-    for(i = 0; i < presentations.length; i++) {
-        presentation = presentation.concat(presentations[presentations.length-1-i]+"\n\n")
+    oldPresentations = ""
+    for(i = 1; i < presentations.length; i++) {
+        oldPresentations = oldPresentations.concat(presentations[presentations.length-1-i]+"\n\n")
     }
 
-    console.log(presentation)
-
-    $("#presentation-text").text(presentation)
+    $("#presentation-text-latest").text(presentations[presentations.length-1])
+    $("#presentation-text").text(oldPresentations)
     $("#presentations").show()
+})
+
+$("#send-button").on("click", function(e){
+    if($("input[type=checkbox]:checked").length == 0) {
+        $("input[type=checkbox]").css({
+            "box-shadow":"0px 0px 1px 1px red",
+        })
+    } else {
+        $("input[type=checkbox]").css({
+            "box-shadow":"0px 0px 0px 0px red"
+        })
+    }
+})
+
+$("input[type=checkbox]").on("click", function(e){
+    if($("input[type=checkbox]:checked").length == 0) {
+        $("input[type=checkbox]").css({
+            "box-shadow":"0px 0px 1px 1px red",
+        })
+    } else {
+        $("input[type=checkbox]").css({
+            "box-shadow":"0px 0px 0px 0px red"
+        })
+    }
 })
 
 $("#return-button").on("click", function(e){

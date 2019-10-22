@@ -64,13 +64,22 @@ p {
 #presentations {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     position: absolute;
     height: 75%;
-    width: 50%;
+    width: 100%;
+}
+
+#presentation-text-latest {
+    color: white;
+    white-space: pre-line;
+    text-align: center;
+    height: auto;
 }
 
 #presentation-text {
-    color: white;
+    margin-top: 20px;
+    color: rgba(255,255,255,0.5);
     white-space: pre-line;
     text-align: center;
     height: 100%;
